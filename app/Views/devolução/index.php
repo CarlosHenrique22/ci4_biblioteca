@@ -11,10 +11,10 @@
     </div>
     <div class="row p-2">
         <div class="col-2">
-            <label for="data_prazo">Data do Prazo:</label>
+            <label for="prazo">Data do Prazo:</label>
         </div>
         <div class="col-10">
-            <input value='<?=$emprestimo['data_prazo']?>'class='form-control' type="date" id='data_prazo' name='data_prazo'>
+            <input value='<?=$emprestimo['prazo']?>'class='form-control' type="date" id='prazo' name='prazo'>
         </div>
     </div>
     <div class="row p-2">
