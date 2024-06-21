@@ -70,11 +70,38 @@
             <div class="btn-group w-100" role="group">
                 <a href='http://localhost:8080/index.php/Obra/index'class="btn btn-outline-secondary">Cancelar</a>
                 <button type="submit" class="btn btn-outline-success">Salvar</button>
+                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Excluir
+                </button>
+
             </div>
         </div>
     </div>
     <?=form_close()?>
 </div>
+
+ <!-- Modal De Excluir-->
+ <?=form_open('Obra/excluir')?>
+    <input value='<?=$obra['id']?>'class='form-control' type="hidden" id='id' name='id'>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+        <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Excluir</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            Você tem certeza que deseja excluir: <br>ID: <?=$obra['id']?><br>Titulo: <?=$obra['Titulo']?><br>Ano: <?=$obra['ano_publicacao']?><br>ISBN: <?=$obra['isbn']?><br> Editora: <?=$obra['id_editora']?>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-danger">Excluir</button>
+        </div>
+        </div>
+        <?=form_close()?>
+    </div>
+    </div>
+
 
     <!-- Modal De Autores-->
     <div class="modal fade" id="exampleModalautor" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
